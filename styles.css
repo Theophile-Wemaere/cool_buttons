@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  height: 200%;
+  height: 300%;
   flex-grow: 1;
 }
 
