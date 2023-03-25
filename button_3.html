@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<head>
+  <title>health-eir</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/images/logo-notext.png" type="image/icon type" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://kit.fontawesome.com/bc424452bc.css"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Nunito&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+  />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</head>
+
+<html>
+  <body>
+    <style>
+      .main-box {
+        top: 10%;
+      }
+      /*https://codepen.io/t_afif/pen/VwxbdpV*/
+      .button-demo {
+        font-family: system-ui, sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        cursor: pointer;
+        border: none;
+        margin: 0.1em;
+      }
+      .button-demo {
+        --b: 5px; /* border thickness */
+        --s: 0.5em; /* size of the corner */
+        --c: #2d67e0;
+
+        padding: calc(0.5em + var(--s)) calc(0.3em + var(--s));
+        padding-left: 30px;
+        padding-right: 30px;
+        color: var(--c);
+        --_p: var(--s);
+        background: conic-gradient(
+            from 90deg at var(--b) var(--b),
+            #0000 90deg,
+            var(--c) 0
+          )
+          var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+          calc(100% - var(--b) - 2 * var(--_p));
+        transition: 0.3s linear, color 0s, background-color 0s;
+        outline: var(--b) solid #0000;
+        outline-offset: 0.2em;
+      }
+      .button-demo:hover,
+      .button-demo:focus-visible {
+        --_p: 0px;
+        outline-color: var(--c);
+        outline-offset: 0.05em;
+      }
+      .button-demo:active {
+        background: var(--c);
+        color: #fff;
+      }
+    </style>
+    <div class="wrapper">
+      <div class="top-bar">
+        <div class="top-bar-img">
+          <a href="/"><img src="images/logo-notext.png" /></a>
+        </div>
+        <a>Les boutons stylés</a>
+      </div>
+      <div class="main-box">
+        <button class="button-demo">this is an animated button !</button>
+        <pre
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <code class="language-css">
+button {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  margin: .1em;
+}
+
+button:hover,
+  button:focus-visible {
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: .05em;
+}
+
+button:active {
+  background: var(--c);
+  color: #fff;
+}
+
+button {
+  --b: 3px;   /* border thickness */
+  --s: .50em; /* size of the corner */
+  --c: #BD5532;
+  
+  padding: calc(.50em + var(--s)) calc(.3em + var(--s));
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--c);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .2em;
+}
+          </code>
+        </pre>
+        <div class="switcher">
+          <a href="button_2.html"><button class="page-button">&lt;</button></a>
+          <a> 3/5 </a>
+          <a href="button_4.html"><button class="page-button">&gt;</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="bottom-bar">
+    <a>© take-eir</a>
+    <a href="/contact.html">Nous contacter</a>
+    <div class="medias">
+      <!-- https://icons8.com/icons/set/social-media -->
+      <a href="https://github.com/Theophile_Wemaere/cool_buttons">
+        <img src="images/icons8-github-24.png" />
+      </a>
+      <a href="https://linkedin.com/"
+        ><img src="images/icons8-linkedin-24.png" />
+      </a>
+      <a href="https://youtube.com/"
+        ><img src="images/icons8-youtube-logo-24.png"
+      /></a>
+      <a href="https://twitter.com/"
+        ><img src="images/icons8-twitter-24.png" />
+      </a>
+      <a href="https://instagram.com/"
+        ><img src="images/icons8-instagram-24.png" />
+      </a>
+    </div>
+  </div>
+</html>
