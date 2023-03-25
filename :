@@ -34,11 +34,24 @@
 <html>
   <body>
     <style>
-      button {
-        width: 200px;
-        height: 100px;
+      .button-demo {
+        height: 50px;
+        padding: 10px 10px;
+        background-color: #2d67e0;
         border-radius: 15px;
+        color: #ffffff;
+        font-family: "Krona One", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
+
+      .button-demo:hover {
+    background-color: #3f2de1;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+    }
+
     </style>
     <div class="wrapper">
       <div class="top-bar">
@@ -48,20 +61,31 @@
         <a>Les boutons stylés</a>
       </div>
       <div class="main-box">
-        <button>this is a simple button !</button>
+        <button class="button-demo">this is a simple button !</button>
         <pre>
           <code class="language-css">
 button {
-  width: 200px;
-  height: 100px;
+  height: 50px;
+  padding: 10px 10px;
+  background-color: #2d67e0;
   border-radius: 15px;
-}         
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    background-color: #3f2de1;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
           </code>
         </pre>
         <div class="switcher">
-          <a><button class="page-button"> &lt; </button></a>
-          <a> 1/5 </a>
-          <a href="button_2.html"><button class="page-button"> &gt; </button></a>
+          <a href="index.html"><button class="page-button">&lt;</button></a>
+          <a> 2/5 </a>
+          <a href="button_3.html"><button class="page-button">&gt;</button></a>
         </div>
       </div>
     </div>
@@ -72,7 +96,7 @@ button {
     <div class="medias">
       <!-- https://icons8.com/icons/set/social-media -->
       <a href="https://github.com/Theophile_Wemaere/cool_buttons">
-        <img src="/images/icons8-github-24.png">
+        <img src="/images/icons8-github-24.png" />
       </a>
       <a href="https://linkedin.com/"
         ><img src="/images/icons8-linkedin-24.png" />
