@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<head>
+  <title>health-eir</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/images/logo-notext.png" type="image/icon type" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://kit.fontawesome.com/bc424452bc.css"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Nunito&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+  />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</head>
+
+<html>
+  <body>
+    <style>
+      .main-box {
+        top: 10%;
+      }
+
+      /*https://getcssscan.com/css-buttons-examples*/
+      .button-demo {
+        font-family: system-ui, sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        padding: 0.6em 2em;
+        border: none;
+        outline: none;
+        color: rgb(255, 255, 255);
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+
+      .button-demo:before {
+        content: "";
+        background: linear-gradient(
+          45deg,
+          #ff0000,
+          #ff7300,
+          #fffb00,
+          #48ff00,
+          #00ffd5,
+          #002bff,
+          #7a00ff,
+          #ff00c8,
+          #ff0000
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing-button-demo 20s linear infinite;
+        transition: opacity 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      @keyframes glowing-button-demo {
+        0% {
+          background-position: 0 0;
+        }
+        50% {
+          background-position: 400% 0;
+        }
+        100% {
+          background-position: 0 0;
+        }
+      }
+
+      .button-demo:after {
+        z-index: -1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #222;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+      }
+    </style>
+    <div class="wrapper">
+      <div class="top-bar">
+        <div class="top-bar-img">
+          <a href="/"><img src="images/logo-notext.png" /></a>
+        </div>
+        <a>Les boutons stylés</a>
+      </div>
+      <div class="main-box">
+        <button class="button-demo">this is a glowing button !</button>
+        <pre
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <code class="language-css">
+
+button {
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+          </code>
+        </pre>
+        <div class="switcher">
+          <a href="button_3.html"><button class="page-button">&lt;</button></a>
+          <a> 4/5 </a>
+          <a href="button_5.html"><button class="page-button">&gt;</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="bottom-bar">
+    <a>© take-eir</a>
+    <a href="/contact.html">Nous contacter</a>
+    <div class="medias">
+      <!-- https://icons8.com/icons/set/social-media -->
+      <a href="https://github.com/Theophile_Wemaere/cool_buttons">
+        <img src="images/icons8-github-24.png" />
+      </a>
+      <a href="https://linkedin.com/"
+        ><img src="images/icons8-linkedin-24.png" />
+      </a>
+      <a href="https://youtube.com/"
+        ><img src="images/icons8-youtube-logo-24.png"
+      /></a>
+      <a href="https://twitter.com/"
+        ><img src="images/icons8-twitter-24.png" />
+      </a>
+      <a href="https://instagram.com/"
+        ><img src="images/icons8-instagram-24.png" />
+      </a>
+    </div>
+  </div>
+</html>
