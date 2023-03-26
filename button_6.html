@@ -1,20 +1,313 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button6</title>
-    <link rel="stylesheet" href="button_6_styles.css">
+  <title>health-eir</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/images/logo-notext.png" type="image/icon type" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://kit.fontawesome.com/bc424452bc.css"
+    crossorigin="anonymous"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Nunito&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+  />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
 </head>
-<body>
-    <a href="#">
-        <span class="span1"></span>
-        <span class="span2"></span>
-        <span class="span3"></span>
-        <span class="span4"></span>
-        Neon button
-    </a>
-    
-</body>
+
+<html>
+  <body>
+    <style>
+      html,
+      body {
+        background-image: none;
+        background-color: #131416;
+      }
+      .main-box {
+        top: 10%;
+      }
+
+      .button-demo {
+        font-family: Arial;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #03e9f4;
+        text-decoration: none; /* Supprime le soulignement dû au lien (balise a) */
+        position: relative;
+        text-transform: uppercase; /* Tout mettre en majuscule*/
+        padding: 25px 30px;
+        letter-spacing: 4px; /* Lettre détachée*/
+        transition: 0.5s all;
+        overflow: hidden;
+      }
+
+      .button-demo:hover {
+        background-color: #03e9f4;
+        color: #131416;
+      }
+
+      .button-demo span {
+        position: absolute;
+      }
+
+      /* On va styliser chacune des balises span une par une*/
+
+      .button-demo span.span1 {
+        /* on place la première balise span en haut du bouton */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, #03e9f4);
+        animation: animate1 1s linear infinite;
+      }
+
+      @keyframes animate1 {
+        /* Création de la première animation */
+        0% {
+          left: -100%;
+        }
+        50%,
+        100% {
+          left: 100%;
+        }
+      }
+
+      .button-demo span.span2 {
+        top: -100%;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(180deg, transparent, #03e9f4);
+        animation: animate2 1s linear infinite;
+        animation-delay: 0.25s; /* Pour que l'animation ne commence pas directement lors de l'affichage de la page*/
+      }
+
+      @keyframes animate2 {
+        0% {
+          top: -100%;
+        }
+        50%,
+        100% {
+          top: 100%;
+        }
+      }
+
+      .button-demo span.span3 {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(270deg, transparent, #03e9f4);
+        animation: animate3 1s linear infinite;
+        animation-delay: 0.5s;
+      }
+
+      @keyframes animate3 {
+        /* Création de la première animation */
+        0% {
+          right: -100%;
+        }
+        50%,
+        100% {
+          right: 100%;
+        }
+      }
+
+      .button-demo span.span4 {
+        bottom: -100%;
+        left: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(360deg, transparent, #03e9f4);
+        animation: animate4 1s linear infinite;
+        animation-delay: 0.75s; /* Pour que l'animation ne commence pas directement lors de l'affichage de la page*/
+      }
+
+      @keyframes animate4 {
+        0% {
+          bottom: -100%;
+        }
+        50%,
+        100% {
+          bottom: 100%;
+        }
+      }
+    </style>
+    <div class="wrapper">
+      <div class="top-bar">
+        <div class="top-bar-img">
+          <a href="/"><img src="images/logo-notext.png" /></a>
+        </div>
+        <a>Les boutons stylés</a>
+      </div>
+      <div class="main-box">
+        <a class="button-demo">
+          <span class="span1"></span>
+          <span class="span2"></span>
+          <span class="span3"></span>
+          <span class="span4"></span>
+          Neon button
+        </a>
+        <pre
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <code class="language-css">
+a {
+  color: #03e9f4;
+  text-decoration: none; /* Supprime le soulignement dû au lien (balise a) */
+  position: relative;
+  text-transform: uppercase; /* Tout mettre en majuscule*/
+  padding: 25px 30px;
+  letter-spacing: 4px; /* Lettre détachée*/
+  transition: 0.5s all;
+  overflow: hidden;
+}
+
+a:hover {
+  background-color: #03e9f4;
+  color: #050801;
+}
+
+a span {
+  position: absolute;
+}
+
+/* On va styliser chacune des balises span une par une*/
+
+a span.span1 {
+  /* on place la première balise span en haut du bouton */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  /* Création de la première animation */
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+a span.span2 {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s; /* Pour que l'animation ne commence pas directement lors de l'affichage de la page*/
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+a span.span3 {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  /* Création de la première animation */
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+a span.span4 {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s; /* Pour que l'animation ne commence pas directement lors de l'affichage de la page*/
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+			</code>
+        </pre>
+        <div class="switcher">
+          <a href="button_5.html"><button class="page-button">&lt;</button></a>
+          <a> 6/6 </a>
+          <a href="end.html"><button class="page-button">&gt;</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <div class="bottom-bar">
+    <a>© take-eir</a>
+    <a href="/contact.html">Nous contacter</a>
+    <div class="medias">
+      <!-- https://icons8.com/icons/set/social-media -->
+      <a href="https://github.com/Theophile_Wemaere/cool_buttons">
+        <img src="images/icons8-github-24.png" />
+      </a>
+      <a href="https://linkedin.com/"
+        ><img src="images/icons8-linkedin-24.png" />
+      </a>
+      <a href="https://youtube.com/"
+        ><img src="images/icons8-youtube-logo-24.png"
+      /></a>
+      <a href="https://twitter.com/"
+        ><img src="images/icons8-twitter-24.png" />
+      </a>
+      <a href="https://instagram.com/"
+        ><img src="images/icons8-instagram-24.png" />
+      </a>
+    </div>
+  </div>
 </html>
